@@ -1,0 +1,21 @@
+.button_list{
+  display: flex;
+
+}
+.button {
+  display: block;
+  cursor: pointer;
+  width: 800px;
+  height: 35px;
+  border-radius: 10px;
+  border-style: solid ;
+  border-color: rgb(228, 168, 168);
+  font-style: italic;
+  background-color: rgb(235, 217, 217);
+}
+
+.button:hover{
+  color: blue;
+  border-color: rgb(178, 178, 223);
+  background-color: rgb(195, 195, 250);
+}

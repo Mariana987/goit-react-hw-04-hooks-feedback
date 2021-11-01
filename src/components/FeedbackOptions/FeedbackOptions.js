@@ -1,0 +1,30 @@
+
+import s from './FeedbackOptions.module.css';
+import shortid from 'shortid';
+
+import PropTypes from 'prop-types';
+
+export default function FeedbackOptions({ options, onLeaveFeedback }) {
+    return (
+        <div className={s.button_list}>
+            {
+                options.map(option => (
+                    <button
+                        onClick={(e) => onLeaveFeedback(e)}
+                        type="button"
+                        className={s.button}
+                        key={shortid.generate()}
+                    >
+                        {option}
+                    </button>
+                ))
+            }
+        </div >
+
+    );
+}
+
+FeedbackOptions.propTypes = {
+    options: PropTypes.array,
+    onLeaveFeedback: PropTypes.func,
+};
